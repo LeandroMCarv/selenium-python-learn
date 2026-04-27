@@ -11,6 +11,7 @@ configuracoes = Options()
 configuracoes.add_argument("--disable-cookies")
 configuracoes.add_argument("--disable-notifications")
 configuracoes.add_argument("--disable-popup-blocking")
+configuracoes.add_argument("--disable-blink-features=AutomationControlled")
 
 #criacao do navegador
 navegador = webdriver.Chrome(configuracoes)
