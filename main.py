@@ -46,10 +46,23 @@ botao_login.click()
 usuario = WebDriverWait(navegador,5).until(
     EC.element_to_be_clickable(("id","identifierId"))
 )
-usuario.send_keys("admin@gmail.com")
+usuario.send_keys("testetestado@gmail.com")
 
 botao_avancar = WebDriverWait(navegador,5).until(
     EC.element_to_be_clickable((By.ID, "identifierNext"))
+)
+botao_avancar.click()
+
+#Tempo suficiente para o usuario fazer o captcha
+time.sleep(20)
+
+senha = WebDriverWait(navegador,5).until(
+    EC.element_to_be_clickable((By.NAME, "Passwd"))
+)
+senha.send_keys("teste")
+
+botao_avancar = WebDriverWait(navegador,5).until(
+    EC.element_to_be_clickable((By.ID,"passwordNext"))
 )
 botao_avancar.click()
 
